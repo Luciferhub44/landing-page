@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Truck, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Truck, Clock, TrendingUp, ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   onApplyClick: () => void;
@@ -111,8 +111,7 @@ export const Hero: React.FC<HeroProps> = ({ onApplyClick, onCalculateClick }) =>
             </div>
 
             <div className="py-2.5 px-4 mt-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-sohan-cocoa/80">
-              <span className="font-semibold flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-sohan-pistachio" />
+              <span className="font-semibold">
                 Pure botanical fragrance extracts · 100% alcohol-free · European artisanal compounding
               </span>
               <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-sohan-cocoa">
@@ -142,7 +141,7 @@ export const Hero: React.FC<HeroProps> = ({ onApplyClick, onCalculateClick }) =>
 
           <div className="p-4 rounded-2xl bg-sohan-card/80 border border-sohan-border/80 shadow-xs">
             <div className="w-8 h-8 rounded-lg bg-sohan-pistachio/15 flex items-center justify-center text-sohan-pistachio mb-3">
-              <Sparkles className="w-4 h-4" />
+              <Clock className="w-4 h-4" />
             </div>
             <p className="text-2xl font-bold font-display text-sohan-cocoa">&lt;60s Packing</p>
             <p className="text-xs text-sohan-cocoa/70 mt-1">Pre-kitted luxury boxes. Simply slap the thermal label</p>

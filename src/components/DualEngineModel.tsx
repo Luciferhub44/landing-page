@@ -1,15 +1,14 @@
 import React from 'react';
-import { DollarSign, Truck, Zap, ShoppingBag, ShieldCheck } from 'lucide-react';
+import { DollarSign, Truck, RefreshCw, ShoppingBag, ShieldCheck } from 'lucide-react';
 
 export const DualEngineModel: React.FC = () => {
   return (
     <section id="model" className="py-20 md:py-32 border-b border-sohan-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sohan-card border border-sohan-border text-xs font-semibold uppercase tracking-wider text-sohan-cocoa mb-4">
-            <Zap className="w-3.5 h-3.5 text-sohan-sugar" />
-            <span>The Economic Breakthrough</span>
-          </div>
+          <p className="text-xs font-bold uppercase tracking-widest text-sohan-sugar mb-3">
+            Economic Architecture
+          </p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl text-sohan-cocoa tracking-tight mb-6">
             The Dual-Engine Partner Model
           </h2>
@@ -110,7 +109,7 @@ export const DualEngineModel: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-sohan-cream/10 border border-sohan-cream/20">
-                  <Zap className="w-5 h-5 text-sohan-sugar shrink-0 mt-0.5" />
+                  <RefreshCw className="w-5 h-5 text-sohan-sugar shrink-0 mt-0.5" />
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-sohan-cream">Automated Inventory Replenishment</h4>
                     <p className="text-xs text-sohan-cream/75 mt-0.5">Whenever an ad order uses your stock, you get credited immediately and replacement inventory ships in bulk.</p>

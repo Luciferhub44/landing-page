@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 export const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -39,10 +39,9 @@ export const FaqSection: React.FC = () => {
     <section id="faq" className="py-20 md:py-32 bg-sohan-card/60 border-b border-sohan-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sohan-cream border border-sohan-border text-xs font-semibold uppercase tracking-wider text-sohan-cocoa mb-4">
-            <HelpCircle className="w-3.5 h-3.5 text-sohan-sugar" />
-            <span>Common Questions</span>
-          </div>
+          <p className="text-xs font-bold uppercase tracking-widest text-sohan-sugar mb-3">
+            Common Questions
+          </p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl text-sohan-cocoa tracking-tight mb-6">
             Frequently Asked Questions
           </h2>

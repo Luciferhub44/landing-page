@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, Star, Shield, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 
 interface PartnerTiersProps {
   onSelectTier: (tierName: string) => void;
@@ -84,10 +84,9 @@ export const PartnerTiers: React.FC<PartnerTiersProps> = ({ onSelectTier }) => {
     <section id="tiers" className="py-20 md:py-32 bg-sohan-card/60 border-b border-sohan-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sohan-cream border border-sohan-border text-xs font-semibold uppercase tracking-wider text-sohan-cocoa mb-4">
-            <Shield className="w-3.5 h-3.5 text-sohan-pistachio" />
-            <span>Structured Investment Tiers</span>
-          </div>
+          <p className="text-xs font-bold uppercase tracking-widest text-sohan-pistachio mb-3">
+            Wholesale Starter Tiers
+          </p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl text-sohan-cocoa tracking-tight mb-6">
             Choose Your Founding Partner Tier
           </h2>
@@ -97,7 +96,7 @@ export const PartnerTiers: React.FC<PartnerTiersProps> = ({ onSelectTier }) => {
         </div>
 
         {/* 3 Tier Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-20">
           {tiers.map((tier) => (
             <div
               key={tier.name}
@@ -108,9 +107,8 @@ export const PartnerTiers: React.FC<PartnerTiersProps> = ({ onSelectTier }) => {
               }`}
             >
               {tier.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-sohan-sugar text-sohan-cream text-[10px] font-extrabold uppercase tracking-widest flex items-center gap-1 shadow-xs">
-                  <Star className="w-3 h-3 fill-current" />
-                  <span>Recommended for Metro Hubs</span>
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-sohan-sugar text-sohan-cream text-[10px] font-bold uppercase tracking-widest shadow-xs">
+                  Most Selected
                 </div>
               )}
 
@@ -160,18 +158,18 @@ export const PartnerTiers: React.FC<PartnerTiersProps> = ({ onSelectTier }) => {
                   </span>
                 </div>
 
-                <div className="space-y-2 mb-6 text-xs">
-                  <div className="flex justify-between py-1 border-b border-current/10">
-                    <span className="font-semibold">Inventory Included:</span>
-                    <span className="font-bold">{tier.inventoryUnits}</span>
+                <div className="rounded-2xl border border-current/15 overflow-hidden mb-6 text-xs divide-y divide-current/10">
+                  <div className="grid grid-cols-5 p-2.5 items-center">
+                    <span className="col-span-2 font-medium opacity-75">Inventory</span>
+                    <span className="col-span-3 font-bold text-right">{tier.inventoryUnits}</span>
                   </div>
-                  <div className="flex justify-between py-1 border-b border-current/10">
-                    <span className="font-semibold">Territory Rights:</span>
-                    <span className="font-bold">{tier.territory}</span>
+                  <div className="grid grid-cols-5 p-2.5 items-center bg-current/5">
+                    <span className="col-span-2 font-medium opacity-75">Territory</span>
+                    <span className="col-span-3 font-bold text-right">{tier.territory}</span>
                   </div>
-                  <div className="flex justify-between py-1 border-b border-current/10">
-                    <span className="font-semibold">Ad Routing Capacity:</span>
-                    <span className="font-bold">{tier.adRoutingCap}</span>
+                  <div className="grid grid-cols-5 p-2.5 items-center">
+                    <span className="col-span-2 font-medium opacity-75">Ad Routing</span>
+                    <span className="col-span-3 font-bold text-right">{tier.adRoutingCap}</span>
                   </div>
                 </div>
 
@@ -207,6 +205,133 @@ export const PartnerTiers: React.FC<PartnerTiersProps> = ({ onSelectTier }) => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Detailed Comparison Table */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <h3 className="font-display font-bold text-2xl sm:text-3xl text-sohan-cocoa mb-2">
+              Detailed Tier Specifications
+            </h3>
+            <p className="text-xs sm:text-sm text-sohan-cocoa/75 max-w-xl mx-auto">
+              Compare starter inventory, territory protections, and operational terms side-by-side.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto rounded-3xl border border-sohan-border bg-sohan-cream shadow-xs">
+            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr className="border-b border-sohan-border bg-sohan-card/90">
+                  <th className="p-4 sm:p-5 font-bold uppercase tracking-wider text-[11px] text-sohan-muted w-1/4">
+                    Specification
+                  </th>
+                  <th className="p-4 sm:p-5 font-bold text-sohan-cocoa w-1/4">
+                    <span className="block font-display font-bold text-base sm:text-lg">Micro-Hub</span>
+                    <span className="text-xs font-semibold text-sohan-pistachio">$1,200 Wholesale</span>
+                  </th>
+                  <th className="p-4 sm:p-5 font-bold text-sohan-cocoa bg-sohan-sugar/10 w-1/4 border-x border-sohan-sugar/30">
+                    <span className="block font-display font-bold text-base sm:text-lg text-sohan-cocoa">City Partner</span>
+                    <span className="text-xs font-bold text-sohan-sugar">$3,500 Wholesale · Core Hub</span>
+                  </th>
+                  <th className="p-4 sm:p-5 font-bold text-sohan-cocoa w-1/4">
+                    <span className="block font-display font-bold text-base sm:text-lg">Regional Master Hub</span>
+                    <span className="text-xs font-semibold text-sohan-muted">$8,000 Wholesale</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-sohan-border/70 text-sohan-cocoa/90">
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Initial Inventory Volume</td>
+                  <td className="p-4 sm:p-5">~75 units starter mix</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-semibold text-sohan-cocoa">~250 units full line</td>
+                  <td className="p-4 sm:p-5">~600 units master stock</td>
+                </tr>
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Retail Direct Margin</td>
+                  <td className="p-4 sm:p-5">45% ($16–$19 profit/unit)</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-semibold text-sohan-cocoa">50% ($17–$20 profit/unit)</td>
+                  <td className="p-4 sm:p-5">52% maximum wholesale margin</td>
+                </tr>
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Territory Exclusivity</td>
+                  <td className="p-4 sm:p-5">Single county / 3 metro zips</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-semibold text-sohan-cocoa">Full metro area exclusivity (1 per metro)</td>
+                  <td className="p-4 sm:p-5">Multi-county / state distribution rights</td>
+                </tr>
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Monthly Ad Routing Cap</td>
+                  <td className="p-4 sm:p-5">Up to 50 orders / mo ($250+ bounty)</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-semibold text-sohan-cocoa">Up to 150 orders / mo ($750+ bounty)</td>
+                  <td className="p-4 sm:p-5">400+ orders / mo priority routing</td>
+                </tr>
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Pre-Kitted Mailers</td>
+                  <td className="p-4 sm:p-5">100% pre-assembled luxury boxes</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-semibold text-sohan-cocoa">100% pre-assembled luxury boxes</td>
+                  <td className="p-4 sm:p-5">100% pre-assembled + bulk packing station</td>
+                </tr>
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Counter Tasting Display</td>
+                  <td className="p-4 sm:p-5">Acrylic tabletop display & blotters</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-semibold text-sohan-cocoa">Handcrafted wooden fragrance tasting tray</td>
+                  <td className="p-4 sm:p-5">Master boutique testing & packing bar</td>
+                </tr>
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Client Sampling Stock</td>
+                  <td className="p-4 sm:p-5">15 Discovery Trios</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-semibold text-sohan-cocoa">100 complimentary 2ml sample vials</td>
+                  <td className="p-4 sm:p-5">300 complimentary 2ml sample vials</td>
+                </tr>
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Thermal Printer Hardware</td>
+                  <td className="p-4 sm:p-5">Standard printer / BYO</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-semibold text-sohan-cocoa">Standard printer / BYO</td>
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Zebra 4×6 commercial thermal printer included</td>
+                </tr>
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">FTC 90% Buy-Back Protection</td>
+                  <td className="p-4 sm:p-5">180-Day Guarantee</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-semibold text-sohan-cocoa">180-Day Guarantee</td>
+                  <td className="p-4 sm:p-5">180-Day Guarantee</td>
+                </tr>
+                <tr className="hover:bg-sohan-card/40 transition-colors">
+                  <td className="p-4 sm:p-5 font-semibold text-sohan-cocoa">Estimated Monthly Revenue</td>
+                  <td className="p-4 sm:p-5 font-bold text-sohan-cocoa">$400 – $900 / mo</td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/5 border-x border-sohan-sugar/20 font-bold text-sohan-sugar text-base">$1,500 – $3,200 / mo</td>
+                  <td className="p-4 sm:p-5 font-bold text-sohan-cocoa">$3,500 – $7,500 / mo</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr className="border-t border-sohan-border bg-sohan-card/90">
+                  <td className="p-4 sm:p-5 font-bold text-xs uppercase tracking-wider text-sohan-muted">Action</td>
+                  <td className="p-4 sm:p-5">
+                    <button
+                      onClick={() => onSelectTier('Micro-Hub Ambassador')}
+                      className="w-full py-2.5 px-4 rounded-full bg-sohan-cocoa hover:bg-sohan-dark text-sohan-cream font-bold text-xs uppercase tracking-wider transition-all"
+                    >
+                      Select Tier 1
+                    </button>
+                  </td>
+                  <td className="p-4 sm:p-5 bg-sohan-sugar/10 border-x border-sohan-sugar/30">
+                    <button
+                      onClick={() => onSelectTier('City Partner')}
+                      className="w-full py-2.5 px-4 rounded-full bg-sohan-sugar hover:bg-sohan-sugar/90 text-sohan-cream font-bold text-xs uppercase tracking-wider transition-all shadow-xs"
+                    >
+                      Select City Partner
+                    </button>
+                  </td>
+                  <td className="p-4 sm:p-5">
+                    <button
+                      onClick={() => onSelectTier('Regional Master Hub')}
+                      className="w-full py-2.5 px-4 rounded-full bg-sohan-cocoa hover:bg-sohan-dark text-sohan-cream font-bold text-xs uppercase tracking-wider transition-all"
+                    >
+                      Select Tier 3
+                    </button>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
       </div>
     </section>

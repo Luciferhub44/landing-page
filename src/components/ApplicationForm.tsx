@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Send, CheckCircle2, Shield, Sparkles, Building, MapPin, Mail, Phone, User } from 'lucide-react';
+import { Send, CheckCircle2, Shield, Building, MapPin, Mail, Phone, User } from 'lucide-react';
 
 interface ApplicationFormProps {
   initialTier?: string;
@@ -46,10 +46,9 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ initialTier = 
     <section id="apply" className="py-20 md:py-32 border-b border-sohan-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sohan-card border border-sohan-border text-xs font-semibold uppercase tracking-wider text-sohan-cocoa mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-sohan-pistachio" />
-            <span>Strictly Confidential Screening</span>
-          </div>
+          <p className="text-xs font-bold uppercase tracking-widest text-sohan-pistachio mb-3">
+            Confidential Territory Screening
+          </p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl text-sohan-cocoa tracking-tight mb-4">
             Apply for Your Metro Territory
           </h2>

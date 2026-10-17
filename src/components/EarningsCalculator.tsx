@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calculator, Sparkles } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 
 interface EarningsCalculatorProps {
   onApplyClick: () => void;
@@ -23,10 +23,9 @@ export const EarningsCalculator: React.FC<EarningsCalculatorProps> = ({ onApplyC
     <section id="calculator" className="py-20 md:py-32 border-b border-sohan-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sohan-card border border-sohan-border text-xs font-semibold uppercase tracking-wider text-sohan-cocoa mb-4">
-            <Calculator className="w-3.5 h-3.5 text-sohan-pistachio" />
-            <span>Interactive Profit Estimator</span>
-          </div>
+          <p className="text-xs font-bold uppercase tracking-widest text-sohan-pistachio mb-3">
+            Financial Modeling
+          </p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl text-sohan-cocoa tracking-tight mb-6">
             Estimate Your Monthly Revenue
           </h2>
@@ -102,7 +101,7 @@ export const EarningsCalculator: React.FC<EarningsCalculatorProps> = ({ onApplyC
 
             <div className="mt-8 pt-6 border-t border-sohan-border/80 flex items-center justify-between text-xs text-sohan-cocoa/80">
               <span className="flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-sohan-pistachio" />
+                <RefreshCw className="w-4 h-4 text-sohan-pistachio" />
                 Inventory is auto-restocked as ad orders deplete stock
               </span>
             </div>

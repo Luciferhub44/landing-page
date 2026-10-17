@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, Droplets, Shield, Flame } from 'lucide-react';
+import { Droplets, Shield, Flame } from 'lucide-react';
 
 export const BrandStory: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'oils' | 'balm' | 'sets'>('all');
@@ -91,10 +91,9 @@ export const BrandStory: React.FC = () => {
     <section id="products" className="py-20 md:py-32 bg-sohan-card/60 border-b border-sohan-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sohan-cream border border-sohan-border text-xs font-semibold uppercase tracking-wider text-sohan-cocoa mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-sohan-pistachio" />
-            <span>Artisanal Formulation & Packaging</span>
-          </div>
+          <p className="text-xs font-bold uppercase tracking-widest text-sohan-pistachio mb-3">
+            Artisanal Fragrance Formulation
+          </p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl text-sohan-cocoa tracking-tight mb-6">
             The Collection You'll Represent
           </h2>

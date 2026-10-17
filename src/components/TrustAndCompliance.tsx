@@ -1,15 +1,14 @@
 import React from 'react';
-import { ShieldCheck, Scale, Award, Lock, FileText } from 'lucide-react';
+import { ShieldCheck, Award, Lock, FileText } from 'lucide-react';
 
 export const TrustAndCompliance: React.FC = () => {
   return (
     <section className="py-20 md:py-32 border-b border-sohan-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sohan-card border border-sohan-border text-xs font-semibold uppercase tracking-wider text-sohan-cocoa mb-4">
-            <Scale className="w-3.5 h-3.5 text-sohan-pistachio" />
-            <span>Integrity & Legal Governance</span>
-          </div>
+          <p className="text-xs font-bold uppercase tracking-widest text-sohan-pistachio mb-3">
+            Integrity & Governance
+          </p>
           <h2 className="font-display font-bold text-3xl sm:text-5xl text-sohan-cocoa tracking-tight mb-6">
             Built on Real Commerce, Not Network Marketing.
           </h2>
