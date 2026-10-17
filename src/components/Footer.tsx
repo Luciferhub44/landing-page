@@ -9,11 +9,12 @@ export const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-full bg-sohan-cream flex items-center justify-center text-sohan-cocoa">
-                <svg viewBox="0 0 100 100" className="w-5 h-5 fill-current">
-                  <circle cx="50" cy="50" r="45" fill="#2B211A"/>
-                  <path d="M75 50 C75 35 60 25 50 25 C36 25 25 36 25 50 C25 64 36 75 50 75 C60 75 70 70 75 60 C65 60 60 55 60 50 C60 45 68 45 75 50 Z" fill="#F2EADC"/>
-                </svg>
+              <div className="w-9 h-9 rounded-full bg-sohan-cream flex items-center justify-center p-1 overflow-hidden">
+                <img
+                  src="/sohan-logo.png"
+                  alt="SOHAN Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-display font-bold text-2xl tracking-wider text-sohan-cream">SOHAN</span>
             </div>
@@ -21,7 +22,7 @@ export const Footer: React.FC = () => {
               Artisanal Persian confectionery fragrance oils & solid botanical balms. Handcrafted formulations, zero ethanol alcohol, designed to bloom on skin mantle.
             </p>
             <p className="text-xs text-sohan-cream/50 uppercase tracking-widest font-semibold">
-              Heritage: Poznań, Poland · US Network Headquarters: Austin, TX
+              Heritage: Poland · US Network Headquarters: Wilmington, DE
             </p>
           </div>
 
@@ -50,13 +51,13 @@ export const Footer: React.FC = () => {
               <li><span className="hover:text-sohan-cream cursor-pointer">FTC Direct Sales Compliance</span></li>
               <li><span className="hover:text-sohan-cream cursor-pointer">Territory Exclusivity Terms</span></li>
               <li><span className="hover:text-sohan-cream cursor-pointer">Partner Portal Login</span></li>
-              <li><span className="hover:text-sohan-cream cursor-pointer">Contact: partners@wearsohan.com</span></li>
+              <li><span className="hover:text-sohan-cream cursor-pointer">Contact: partner@sohanscents.com</span></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-8 border-t border-sohan-cream/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-sohan-cream/50">
-          <p>© 2026 SOHAN Fragrances. All rights reserved. SOHAN is a registered trademark.</p>
+          <p>© 2026 SOHAN Scents. All rights reserved. SOHAN is a registered trademark.</p>
           <p className="flex items-center gap-1.5">
             <ShieldCheck className="w-3.5 h-3.5 text-sohan-pistachio" />
             <span>Authorized B2B Wholesale & Micro-Hub Network</span>
