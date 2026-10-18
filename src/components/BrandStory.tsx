@@ -134,11 +134,11 @@ export const BrandStory: React.FC = () => {
             >
               <div>
                 {/* Product Image Frame */}
-                <div className="relative aspect-[4/5] bg-sohan-card/80 overflow-hidden border-b border-sohan-border flex items-center justify-center p-4">
+                <div className="relative aspect-[3/4] bg-sohan-cream overflow-hidden border-b border-sohan-border">
                   <img
                     src={p.image}
                     alt={p.title}
-                    className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                   <div className="absolute top-3 left-3">
