@@ -104,7 +104,7 @@ export const BrandStory: React.FC = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex items-center sm:justify-center overflow-x-auto pb-2 sm:pb-0 gap-2 mb-8 sm:mb-12 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-none">
           {[
             { key: 'all', label: 'All Products (5)' },
             { key: 'oils', label: 'Perfume Oils (10ml)' },
@@ -114,7 +114,7 @@ export const BrandStory: React.FC = () => {
             <button
               key={tab.key}
               onClick={() => setActiveFilter(tab.key as any)}
-              className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
+              className={`px-4 py-2.5 sm:px-5 sm:py-2 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap min-h-[42px] transition-all ${
                 activeFilter === tab.key
                   ? 'bg-sohan-cocoa text-sohan-cream shadow-xs'
                   : 'bg-sohan-cream text-sohan-cocoa/80 border border-sohan-border hover:border-sohan-cocoa'
@@ -188,7 +188,7 @@ export const BrandStory: React.FC = () => {
         </div>
 
         {/* Quality Pillars Banner */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 rounded-3xl bg-sohan-cocoa text-sohan-cream">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 sm:p-8 rounded-3xl bg-sohan-cocoa text-sohan-cream">
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-sohan-cream/10 flex items-center justify-center text-sohan-cream shrink-0">
               <Droplets className="w-5 h-5 text-sohan-pistachio" />

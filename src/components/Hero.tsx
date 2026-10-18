@@ -16,36 +16,36 @@ export const Hero: React.FC<HeroProps> = ({ onApplyClick, onCalculateClick }) =>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-12">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sohan-card border border-sohan-border shadow-xs mb-6">
-            <span className="w-2 h-2 rounded-full bg-sohan-pistachio animate-ping" />
-            <span className="text-xs uppercase tracking-widest font-semibold text-sohan-cocoa">
-              Founding Metro Cohort · 20 Exclusive US Territories
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sohan-card border border-sohan-border shadow-xs mb-6 max-w-full">
+            <span className="w-2 h-2 rounded-full bg-sohan-pistachio animate-ping shrink-0" />
+            <span className="text-[10px] sm:text-xs uppercase tracking-widest font-semibold text-sohan-cocoa truncate">
+              Founding Metro Cohort · 20 US Territories
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-display font-bold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-sohan-cocoa leading-[1.08] mb-6">
+          <h1 className="font-display font-bold text-3xl sm:text-5xl lg:text-7xl tracking-tight text-sohan-cocoa leading-[1.12] sm:leading-[1.08] mb-5 sm:mb-6">
             Own the SOHAN Fragrance Network in Your City.
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl text-sohan-cocoa/80 leading-relaxed font-sans max-w-3xl mx-auto mb-8">
+          <p className="text-base sm:text-xl text-sohan-cocoa/80 leading-relaxed font-sans max-w-3xl mx-auto mb-8">
             A modern hybrid model pairing high-margin artisanal fragrance wholesale with decentralized micro-fulfillment. 
             Earn <strong className="text-sohan-cocoa font-bold">45%–50% margin</strong> on local sales, plus an automated <strong className="text-sohan-cocoa font-bold">$5.00 fulfillment bounty</strong> on online orders our ads drive in your territory.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12">
             <button
               onClick={onApplyClick}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-sohan-cocoa text-sohan-cream font-bold text-xs uppercase tracking-wider hover:bg-sohan-dark transition-all shadow-md active:scale-95 group"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-sohan-cocoa text-sohan-cream font-bold text-xs uppercase tracking-wider hover:bg-sohan-dark transition-all shadow-md active:scale-95 group min-h-[48px]"
             >
               <span>Claim Your Metro Territory</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={onCalculateClick}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-sohan-card border border-sohan-border text-sohan-cocoa font-semibold text-xs uppercase tracking-wider hover:bg-sohan-cream transition-all shadow-xs"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-sohan-card border border-sohan-border text-sohan-cocoa font-semibold text-xs uppercase tracking-wider hover:bg-sohan-cream transition-all shadow-xs min-h-[48px]"
             >
               <TrendingUp className="w-4 h-4 text-sohan-pistachio" />
               <span>Calculate Your Revenue</span>
@@ -122,37 +122,37 @@ export const Hero: React.FC<HeroProps> = ({ onApplyClick, onCalculateClick }) =>
         </div>
 
         {/* Core Trust Anchors */}
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
-          <div className="p-4 rounded-2xl bg-sohan-card/80 border border-sohan-border/80 shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-sohan-pistachio/15 flex items-center justify-center text-sohan-pistachio mb-3">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-sohan-card/80 border border-sohan-border/80 shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-sohan-pistachio/15 flex items-center justify-center text-sohan-pistachio mb-2.5">
               <TrendingUp className="w-4 h-4" />
             </div>
-            <p className="text-2xl font-bold font-display text-sohan-cocoa">45% Margin</p>
-            <p className="text-xs text-sohan-cocoa/70 mt-1">Full wholesale margin on all local in-person sales</p>
+            <p className="text-xl sm:text-2xl font-bold font-display text-sohan-cocoa">45% Margin</p>
+            <p className="text-[11px] sm:text-xs text-sohan-cocoa/70 mt-1">Wholesale profit on local sales</p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-sohan-card/80 border border-sohan-border/80 shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-sohan-sugar/15 flex items-center justify-center text-sohan-sugar mb-3">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-sohan-card/80 border border-sohan-border/80 shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-sohan-sugar/15 flex items-center justify-center text-sohan-sugar mb-2.5">
               <Truck className="w-4 h-4" />
             </div>
-            <p className="text-2xl font-bold font-display text-sohan-cocoa">$5.00 / Order</p>
-            <p className="text-xs text-sohan-cocoa/70 mt-1">Automated fee for local orders routed from our ad spend</p>
+            <p className="text-xl sm:text-2xl font-bold font-display text-sohan-cocoa">$5.00 / Box</p>
+            <p className="text-[11px] sm:text-xs text-sohan-cocoa/70 mt-1">Automated local order bounty</p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-sohan-card/80 border border-sohan-border/80 shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-sohan-pistachio/15 flex items-center justify-center text-sohan-pistachio mb-3">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-sohan-card/80 border border-sohan-border/80 shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-sohan-pistachio/15 flex items-center justify-center text-sohan-pistachio mb-2.5">
               <Clock className="w-4 h-4" />
             </div>
-            <p className="text-2xl font-bold font-display text-sohan-cocoa">&lt;60s Packing</p>
-            <p className="text-xs text-sohan-cocoa/70 mt-1">Pre-kitted luxury boxes. Simply slap the thermal label</p>
+            <p className="text-xl sm:text-2xl font-bold font-display text-sohan-cocoa">&lt;60s Packing</p>
+            <p className="text-[11px] sm:text-xs text-sohan-cocoa/70 mt-1">Pre-kitted boxes. Slap the label</p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-sohan-card/80 border border-sohan-border/80 shadow-xs">
-            <div className="w-8 h-8 rounded-lg bg-sohan-cocoa/10 flex items-center justify-center text-sohan-cocoa mb-3">
+          <div className="p-3.5 sm:p-4 rounded-2xl bg-sohan-card/80 border border-sohan-border/80 shadow-xs">
+            <div className="w-8 h-8 rounded-lg bg-sohan-cocoa/10 flex items-center justify-center text-sohan-cocoa mb-2.5">
               <ShieldCheck className="w-4 h-4" />
             </div>
-            <p className="text-2xl font-bold font-display text-sohan-cocoa">90% Buy-Back</p>
-            <p className="text-xs text-sohan-cocoa/70 mt-1">FTC-compliant safety shield for unsold inventory</p>
+            <p className="text-xl sm:text-2xl font-bold font-display text-sohan-cocoa">90% Shield</p>
+            <p className="text-[11px] sm:text-xs text-sohan-cocoa/70 mt-1">180-day inventory buy-back</p>
           </div>
         </div>
       </div>

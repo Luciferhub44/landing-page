@@ -84,7 +84,7 @@ export const ApplicationForm: React.FC<ApplicationFormProps> = ({ initialTier = 
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="p-8 sm:p-12 rounded-3xl bg-sohan-card border border-sohan-border shadow-sm space-y-6"
+            className="p-5 sm:p-12 rounded-3xl bg-sohan-card border border-sohan-border shadow-sm space-y-6"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Full Name */}

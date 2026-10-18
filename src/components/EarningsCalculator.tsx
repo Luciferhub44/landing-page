@@ -36,7 +36,7 @@ export const EarningsCalculator: React.FC<EarningsCalculatorProps> = ({ onApplyC
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Controls Column */}
-          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl bg-sohan-card border border-sohan-border shadow-xs flex flex-col justify-between">
+          <div className="lg:col-span-7 p-5 sm:p-10 rounded-3xl bg-sohan-card border border-sohan-border shadow-xs flex flex-col justify-between">
             <div className="space-y-8">
               {/* Slider 1: Direct Sales */}
               <div>
@@ -108,7 +108,7 @@ export const EarningsCalculator: React.FC<EarningsCalculatorProps> = ({ onApplyC
           </div>
 
           {/* Result Card Column */}
-          <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-sohan-cocoa text-sohan-cream shadow-md flex flex-col justify-between">
+          <div className="lg:col-span-5 p-6 sm:p-10 rounded-3xl bg-sohan-cocoa text-sohan-cream shadow-md flex flex-col justify-between">
             <div>
               <span className="text-xs uppercase font-bold tracking-widest text-sohan-sugar">
                 Estimated Net Earnings

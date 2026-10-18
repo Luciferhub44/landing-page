@@ -60,9 +60,9 @@ export const FaqSection: React.FC = () => {
               >
                 <button
                   onClick={() => toggleFaq(index)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none"
+                  className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none min-h-[48px]"
                 >
-                  <span className="font-display font-bold text-base sm:text-lg text-sohan-cocoa">
+                  <span className="font-display font-bold text-sm sm:text-lg text-sohan-cocoa">
                     {faq.question}
                   </span>
                   <div className={`w-8 h-8 rounded-full bg-sohan-card border border-sohan-border flex items-center justify-center shrink-0 text-sohan-cocoa transition-transform duration-200 ${
@@ -73,7 +73,7 @@ export const FaqSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm text-sohan-cocoa/80 leading-relaxed border-t border-sohan-border/60">
+                  <div className="px-4 pb-5 sm:px-6 sm:pb-6 pt-1 text-xs sm:text-sm text-sohan-cocoa/80 leading-relaxed border-t border-sohan-border/60">
                     {faq.answer}
                   </div>
                 )}

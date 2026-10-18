@@ -19,9 +19,9 @@ export const DualEngineModel: React.FC = () => {
         </div>
 
         {/* The 2 Side-by-Side Engines */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-16">
           {/* Engine 1 */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-sohan-card border-2 border-sohan-border/80 shadow-xs flex flex-col justify-between relative overflow-hidden">
+          <div className="p-6 sm:p-10 rounded-3xl bg-sohan-card border-2 border-sohan-border/80 shadow-xs flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-sohan-pistachio/10 rounded-bl-full pointer-events-none" />
 
             <div>
@@ -73,7 +73,7 @@ export const DualEngineModel: React.FC = () => {
           </div>
 
           {/* Engine 2 */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-sohan-cocoa text-sohan-cream shadow-md flex flex-col justify-between relative overflow-hidden">
+          <div className="p-6 sm:p-10 rounded-3xl bg-sohan-cocoa text-sohan-cream shadow-md flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-sohan-sugar/20 rounded-bl-full pointer-events-none" />
 
             <div>

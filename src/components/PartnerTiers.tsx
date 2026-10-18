@@ -218,8 +218,13 @@ export const PartnerTiers: React.FC<PartnerTiersProps> = ({ onSelectTier }) => {
             </p>
           </div>
 
+          <div className="flex items-center justify-between px-2 mb-2 sm:hidden text-[11px] font-semibold text-sohan-muted">
+            <span>Side-by-Side Matrix</span>
+            <span className="text-sohan-sugar font-bold">Swipe horizontally →</span>
+          </div>
+
           <div className="overflow-x-auto rounded-3xl border border-sohan-border bg-sohan-cream shadow-xs">
-            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+            <table className="w-full min-w-[620px] text-left border-collapse text-xs sm:text-sm">
               <thead>
                 <tr className="border-b border-sohan-border bg-sohan-card/90">
                   <th className="p-4 sm:p-5 font-bold uppercase tracking-wider text-[11px] text-sohan-muted w-1/4">
