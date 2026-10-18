@@ -1,7 +1,11 @@
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenGovernance?: (policyId?: string) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenGovernance }) => {
   return (
     <footer className="bg-sohan-dark text-sohan-cream py-16 border-t border-sohan-cocoa">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,11 +51,62 @@ export const Footer: React.FC = () => {
               Governance & Policies
             </h4>
             <ul className="space-y-2.5 text-xs text-sohan-cream/80">
-              <li><span className="hover:text-sohan-cream cursor-pointer">90% Buy-Back Policy</span></li>
-              <li><span className="hover:text-sohan-cream cursor-pointer">FTC Direct Sales Compliance</span></li>
-              <li><span className="hover:text-sohan-cream cursor-pointer">Territory Exclusivity Terms</span></li>
-              <li><span className="hover:text-sohan-cream cursor-pointer">Partner Portal Login</span></li>
-              <li><span className="hover:text-sohan-cream cursor-pointer">Contact: partner@sohanscents.com</span></li>
+              <li>
+                <button
+                  onClick={() => onOpenGovernance?.('buy-back-policy')}
+                  className="hover:text-sohan-cream transition-colors text-left"
+                >
+                  90% Buy-Back Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenGovernance?.('ftc-compliance')}
+                  className="hover:text-sohan-cream transition-colors text-left"
+                >
+                  FTC Direct Sales Compliance
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenGovernance?.('territory-terms')}
+                  className="hover:text-sohan-cream transition-colors text-left"
+                >
+                  Territory Exclusivity Terms
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenGovernance?.('product-regulations')}
+                  className="hover:text-sohan-cream transition-colors text-left"
+                >
+                  EU & FDA Product Safety
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenGovernance?.('map-conduct')}
+                  className="hover:text-sohan-cream transition-colors text-left"
+                >
+                  Partner Code of Conduct (MAP)
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenGovernance?.()}
+                  className="text-sohan-pistachio hover:underline transition-all text-left font-semibold"
+                >
+                  View All Governance Charters →
+                </button>
+              </li>
+              <li>
+                <a
+                  href="mailto:partner@sohanscents.com"
+                  className="hover:text-sohan-cream transition-colors"
+                >
+                  Contact: partner@sohanscents.com
+                </a>
+              </li>
             </ul>
           </div>
         </div>

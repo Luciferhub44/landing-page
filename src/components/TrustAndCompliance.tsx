@@ -1,7 +1,11 @@
 import React from 'react';
-import { ShieldCheck, Award, Lock, FileText } from 'lucide-react';
+import { ShieldCheck, Award, Lock, FileText, ArrowRight } from 'lucide-react';
 
-export const TrustAndCompliance: React.FC = () => {
+interface TrustAndComplianceProps {
+  onOpenGovernance?: (policyId?: string) => void;
+}
+
+export const TrustAndCompliance: React.FC<TrustAndComplianceProps> = ({ onOpenGovernance }) => {
   return (
     <section className="py-20 md:py-32 border-b border-sohan-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,10 +72,40 @@ export const TrustAndCompliance: React.FC = () => {
         </div>
 
         {/* Legal Disclaimer Box */}
-        <div className="p-6 rounded-2xl bg-sohan-cream border border-sohan-border/80 max-w-4xl mx-auto text-center text-xs text-sohan-cocoa/70 leading-relaxed">
-          <p>
+        <div className="p-6 rounded-3xl bg-sohan-card border border-sohan-border/80 max-w-4xl mx-auto text-center text-xs text-sohan-cocoa/80 leading-relaxed shadow-2xs">
+          <p className="mb-4">
             <strong className="text-sohan-cocoa">FTC Compliance Disclosure:</strong> SOHAN operates a legitimate B2B Wholesale Distribution and Authorized Micro-Fulfillment Contractor program. SOHAN does not make earnings claims or guarantees of financial success. Partner revenues depend entirely on local market conditions, sales efforts, and regional e-commerce demand.
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-3 border-t border-sohan-border/60">
+            <button
+              onClick={() => onOpenGovernance?.('buy-back-policy')}
+              className="text-sohan-cocoa hover:text-sohan-sugar font-semibold underline underline-offset-4"
+            >
+              180-Day 90% Buy-Back Details
+            </button>
+            <span className="text-sohan-border">•</span>
+            <button
+              onClick={() => onOpenGovernance?.('ftc-compliance')}
+              className="text-sohan-cocoa hover:text-sohan-sugar font-semibold underline underline-offset-4"
+            >
+              FTC Anti-Pyramid Charter
+            </button>
+            <span className="text-sohan-border">•</span>
+            <button
+              onClick={() => onOpenGovernance?.('territory-terms')}
+              className="text-sohan-cocoa hover:text-sohan-sugar font-semibold underline underline-offset-4"
+            >
+              Territory Exclusivity Rules
+            </button>
+            <span className="text-sohan-border">•</span>
+            <button
+              onClick={() => onOpenGovernance?.()}
+              className="inline-flex items-center gap-1 text-sohan-pistachio hover:underline font-bold"
+            >
+              <span>Explore All Governance Charters</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

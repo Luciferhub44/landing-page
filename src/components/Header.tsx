@@ -3,9 +3,10 @@ import { MapPin, ArrowRight } from 'lucide-react';
 
 interface HeaderProps {
   onApplyClick: () => void;
+  onGovernanceClick?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onApplyClick }) => {
+export const Header: React.FC<HeaderProps> = ({ onApplyClick, onGovernanceClick }) => {
   return (
     <header className="sticky top-0 z-50 bg-sohan-cream/90 backdrop-blur-md border-b border-sohan-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -23,12 +24,18 @@ export const Header: React.FC<HeaderProps> = ({ onApplyClick }) => {
           </div>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider text-sohan-cocoa/80">
+        <nav className="hidden md:flex items-center gap-7 text-sm font-semibold uppercase tracking-wider text-sohan-cocoa/80">
           <a href="#model" className="hover:text-sohan-cocoa transition-colors">The Model</a>
           <a href="#products" className="hover:text-sohan-cocoa transition-colors">Fragrances</a>
           <a href="#calculator" className="hover:text-sohan-cocoa transition-colors">Earnings</a>
           <a href="#tiers" className="hover:text-sohan-cocoa transition-colors">Starter Packs</a>
           <a href="#faq" className="hover:text-sohan-cocoa transition-colors">FAQs</a>
+          <button
+            onClick={onGovernanceClick}
+            className="hover:text-sohan-cocoa text-sohan-sugar transition-colors font-bold uppercase tracking-wider"
+          >
+            Governance
+          </button>
         </nav>
 
         <div className="flex items-center gap-3">
